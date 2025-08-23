@@ -23,8 +23,6 @@ global.decomp_vars = {
 #macro trace show_debug_message
 #macro waaah show_message
 
-exception_unhandled_handler(crash_method);
-
 global.monitorPlotVariable = false;
 global.monitorFlags = []; // List of flags to monitor
 
@@ -209,3 +207,6 @@ global.music_array = [
 	mus_waterquiet,
 	mus_decomp_settings
 ];
+
+// Sadie: GX.games needs this and I'm not sure why other targets don't
+if os_type == os_gxgames texture_set_interpolation(false)
